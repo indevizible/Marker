@@ -83,6 +83,9 @@ public struct TextStyle {
     /// Text transform.
     public var textTransform: TextTransform
     
+    /// Text margin.
+    public var margin: UIEdgeInsets
+    
     // MARK: - Computed properties
     
     /// Text attribute dictionary representation of the receiver.
@@ -186,7 +189,8 @@ public struct TextStyle {
                 underlineColor: Color? = nil,
                 linkFont: Font? = nil,
                 linkColor: Color? = nil,
-                textTransform: TextTransform = .none) {
+                textTransform: TextTransform = .none,
+                margin: UIEdgeInsets = .zero) {
         self.font = font
         self.emFont = (emFont == nil) ? font : emFont!
         self.strongFont = (strongFont == nil) ? font : strongFont!
@@ -209,5 +213,6 @@ public struct TextStyle {
         self.linkFont = linkFont
         self.linkColor = linkColor
         self.textTransform = textTransform
+        self.margin = margin
     }
 }
